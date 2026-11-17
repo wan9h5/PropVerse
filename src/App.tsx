@@ -12,6 +12,16 @@ export default function App() {
   const [copied, setCopied] = useState(false)
   const [mobileMenu, setMobileMenu] = useState(false)
   const filtered = useMemo(() => assets.filter(a => (category === 'All objects' || a.category === category) && (a.name + a.type + a.origin + a.era).toLowerCase().includes(query.toLowerCase())), [category, query])
+  const heroTiles = [
+    { asset: assets[8], className: 'tile-paper', number: '01' },
+    { asset: assets[6], className: 'tile-tv', number: '02' },
+    { asset: assets[0], className: 'tile-stool', number: '03' },
+    { asset: assets[7], className: 'tile-phone', number: '04' },
+    { asset: assets[4], className: 'tile-chair', number: '05' },
+    { asset: assets[12], className: 'tile-tools', number: '06' },
+    { asset: assets[13], className: 'tile-bike', number: '07' },
+    { asset: assets[5], className: 'tile-table', number: '08' },
+  ]
   const go = (p: Page) => { setPage(p); setSelected(null); window.scrollTo(0,0) }
   const toggleSave = (id:number) => setSaved(s => s.includes(id) ? s.filter(x=>x!==id) : [...s,id])
   const copyPrompt = async (prompt:string) => { await navigator.clipboard?.writeText(prompt); setCopied(true); window.setTimeout(()=>setCopied(false),1600) }
@@ -20,13 +30,40 @@ export default function App() {
     <div className="asset-meta"><div><span className="eyebrow">{a.type} <i>·</i> {a.era}</span><h3>{a.name}</h3><p>{a.origin}</p></div><button className={`save-btn ${saved.includes(a.id)?'active':''}`} onClick={()=>toggleSave(a.id)} aria-label="Save item"><Heart size={17} fill={saved.includes(a.id)?'currentColor':'none'}/></button></div>
   </article>
   return <div className="app-shell">
-    <header className="topbar"><button className="brand" onClick={()=>go('home')}><span className="brand-mark">p.</span><span>propverse<span className="brand-dot">.</span></span></button><nav className="main-nav"><button className={page==='home'?'nav-active':''} onClick={()=>go('home')}>Home</button><button className={page==='components'?'nav-active':''} onClick={()=>go('components')}>Components</button><a href="#about">About</a></nav><div className="top-actions"><span className="edition">A VISUAL INDEX FOR STORYTELLERS</span><button className="icon-btn mobile-toggle" onClick={()=>setMobileMenu(!mobileMenu)}><Menu size={19}/></button><button className="saved-link" onClick={()=>{setPage('components');setCategory('All objects')}}><Bookmark size={15}/> Saved <span>{saved.length}</span></button></div></header>
+    <header className="topbar topbar-art">
+      <button className="brand" onClick={()=>go('home')}><span className="brand-mark">p.</span><span>propverse<span className="brand-dot">.</span></span></button>
+      <nav className="main-nav"><button className={page==='home'?'nav-active':''} onClick={()=>go('home')}>Home</button><button className={page==='components'?'nav-active':''} onClick={()=>go('components')}>Components</button><a href="#about">About</a></nav>
+      <div className="top-actions"><span className="edition">A VISUAL INDEX FOR STORYTELLERS</span><button className="icon-btn mobile-toggle" onClick={()=>setMobileMenu(!mobileMenu)}><Menu size={19}/></button><button className="header-cta" onClick={()=>go('components')}>Explore library <ArrowUpRight size={14}/></button><span className="header-status" aria-label="Online"/></div>
+    </header>
     {mobileMenu && <div className="mobile-nav"><button onClick={()=>go('home')}>Home</button><button onClick={()=>go('components')}>Components</button></div>}
     {page==='home' ? <main className="home-page">
-      <section className="hero"><div className="hero-copy"><div className="eyebrow hero-kicker"><span className="live-dot"/> A NEW WAY TO FIND YOUR PROPS</div><h1>Find the things<br/>you <em>can picture.</em></h1><p className="hero-lede">The chair in your mind. The old television from a half-remembered room. The exact object you can't quite describe.</p><div className="hero-actions"><button className="primary-btn" onClick={()=>go('components')}>Explore components <ArrowUpRight size={16}/></button><span className="hero-note">A visual asset library for AI storytellers</span></div></div><div className="hero-visual"><div className="hero-photo hero-photo-main"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1100&q=90" alt="A sculptural wooden chair"/><span className="photo-caption">01 — FORM & FUNCTION</span></div><div className="hero-photo hero-photo-small"><img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=85" alt="Warm vintage interior"/><span className="photo-caption">02 — LIVED-IN SPACES</span></div><span className="hero-stamp">OBJECTS<br/>TELL<br/>STORIES<span>✳</span></span></div><div className="hero-bottom"><span>01 / 03</span><span>DISCOVER BY LOOKING, NOT BY NAMING</span><ArrowDownRight size={18}/></div></section>
-      <section className="intro-strip"><span className="eyebrow">THE IDEA</span><p>Sometimes you know exactly what you want to see — you just don't know what to call it. <em>Start with the image. We'll help with the words.</em></p><button className="text-link" onClick={()=>go('components')}>Browse the index <ArrowRight size={15}/></button></section>
-      <section className="home-featured"><div className="section-heading"><div><span className="eyebrow">A FEW THINGS TO START WITH</span><h2>Objects with a story.</h2></div><button className="text-link" onClick={()=>go('components')}>View all components <ArrowUpRight size={15}/></button></div><div className="asset-grid featured-grid">{assets.filter(a=>a.featured || a.category==='Furniture').slice(0,4).map(card)}</div></section>
-      <footer className="footer" id="about"><span className="footer-brand">propverse.</span><span>Find what you imagine. Describe it with confidence.</span><span>© 2026 PROPVERSE</span></footer>
+      <section className="hero-art">
+        <div className="hero-masthead">
+          <div className="hero-wordmark-wrap">
+            <div className="hero-wordmark">Prop<span>Verse</span><i>®</i></div>
+            <div className="hero-wordmark-caption"><span>THE OBJECT INDEX</span><span>VOL. 001 — EVERYDAY THINGS</span></div>
+          </div>
+          <div className="hero-statement">
+            <span className="eyebrow">FOR AI FILMMAKERS & STORYTELLERS</span>
+            <h1>The creative sidekick<br/>for things you can't quite <em>name.</em></h1>
+            <button className="hero-discover" onClick={()=>go('components')}>DISCOVER THE COLLECTION <ArrowUpRight size={15}/></button>
+          </div>
+        </div>
+        <div className="hero-canvas">
+          <div className="canvas-index"><span className="canvas-index-dot"/> A VISUAL INDEX OF OBJECTS <span>— 001 / 128</span></div>
+          {heroTiles.map(({asset, className, number})=><button key={asset.id} className={`mood-tile ${className}`} onClick={()=>setSelected(asset)} aria-label={`View ${asset.name}`}>
+            <img src={asset.image} alt={asset.name}/>
+            <span className="mood-tile-caption"><span>{number} / {asset.type.toUpperCase()}</span><ArrowUpRight size={13}/></span>
+          </button>)}
+          <form className="hero-search" onSubmit={e=>{e.preventDefault();go('components')}}>
+            <span className="hero-search-label">START WITH WHAT YOU SEE</span>
+            <div className="hero-search-control"><Search size={17}/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="A wooden stool, an old television, a folded letter..." aria-label="Search objects"/><button type="submit">SEARCH <ArrowUpRight size={15}/></button></div>
+          </form>
+          <div className="canvas-note canvas-note-left">DISCOVER BY LOOKING,<br/>NOT BY NAMING.</div>
+          <div className="canvas-note canvas-note-right">OBJECTS HAVE STORIES.<br/>FIND THE ONE YOU IMAGINE. <span>✳</span></div>
+        </div>
+      </section>
+      <footer className="footer home-footer" id="about"><span className="footer-brand">propverse.</span><span>Find what you imagine. Describe it with confidence.</span><span>© 2026 PROPVERSE</span></footer>
     </main> : <main className="library-page">
       <div className="library-heading"><div><span className="eyebrow">THE VISUAL INDEX / 001—128</span><h1>Components<span className="heading-period">.</span></h1><p>Explore objects by looking. Find the one that feels right.</p></div><div className="library-count"><strong>{filtered.length.toString().padStart(2,'0')}</strong><span>OBJECTS SHOWN</span></div></div>
       <div className="library-layout"><aside className={`sidebar ${mobileMenu?'sidebar-open':''}`}><div className="sidebar-head"><span className="eyebrow">BROWSE BY CATEGORY</span><button className="icon-btn mobile-toggle" onClick={()=>setMobileMenu(false)}><X size={17}/></button></div><div className="category-list">{categories.map(c=><button key={c.name} className={`category-btn ${category===c.name?'category-active':''}`} onClick={()=>{setCategory(c.name);setMobileMenu(false)}}><span className="category-symbol">{c.icon}</span><span>{c.name}</span><small>{c.count}</small></button>)}</div><div className="sidebar-note"><Sparkles size={15}/><p>Don't know the name?<br/><strong>That's what we're here for.</strong></p></div><div className="sidebar-bottom">A GROWING INDEX OF EVERYDAY THINGS</div></aside>
