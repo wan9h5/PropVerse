@@ -7,9 +7,21 @@ datasource db {
   url = env("DATABASE_URL")
 }
 
-enum AssetStatus {\n  DRAFT\n  REVIEW\n  PUBLISHED\n  ARCHIVED\n}
-enum AssetMediaType {\n  IMAGE\n  MODEL_3D\n}
-enum ImageRole {\n  COVER\n  GALLERY\n  THUMBNAIL\n}
+enum AssetStatus {
+  DRAFT
+  REVIEW
+  PUBLISHED
+  ARCHIVED
+}
+enum AssetMediaType {
+  IMAGE
+  MODEL_3D
+}
+enum ImageRole {
+  COVER
+  GALLERY
+  THUMBNAIL
+}
 
 model Category {
   id String @id @default(cuid())
