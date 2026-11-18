@@ -1,0 +1,123 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url = env("DATABASE_URL")
+}
+
+enum AssetStatus { DRAFT REVIEW PUBLISHED ARCHIVED }
+enum AssetMediaType { IMAGE MODEL_3D }
+enum ImageRole { COVER GALLERY THUMBNAIL }
+
+model Category {
+  id String @id @default(cuid())
+  slug String @unique
+  sortOrder Int @default(0)
+  isActive Boolean @default(true)
+  translations CategoryTranslation[]
+  assets Asset[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model CategoryTranslation {
+  id String @id @default(cuid())
+  categoryId String
+  locale String @db.VarChar(10)
+  name String @db.VarChar(120)
+  description String? @db.Text
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  @@unique([categoryId, locale])
+  @@index([locale, name])
+}
+model Asset {
+  id String @id @default(cuid())
+  slug String @unique
+  categoryId String
+  subcategory String? @db.VarChar(120)
+  regionCode String? @db.VarChar(32)
+  periodStart Int?
+  periodEnd Int?
+  status AssetStatus @default(DRAFT)
+  featured Boolean @default(false)
+  sortOrder Int @default(0)
+  category Category @relation(fields: [categoryId], references: [id])
+  translations AssetTranslation[]
+  media AssetMedia[]
+  tags AssetTag[]
+  generation GenerationRecord?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  publishedAt DateTime?
+  @@index([categoryId, status, sortOrder])
+  @@index([status, publishedAt])
+}
+model AssetTranslation {
+  id String @id @default(cuid())
+  assetId String
+  locale String @db.VarChar(10)
+  name String @db.VarChar(180)
+  aliases Json?
+  summary String? @db.VarChar(500)
+  description String? @db.Text
+  visualDescription String? @db.Text
+  prompt String? @db.Text
+  searchTerms Json?
+  asset Asset @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  @@unique([assetId, locale])
+  @@index([locale, name])
+}
+model AssetMedia {
+  id String @id @default(cuid())
+  assetId String
+  mediaType AssetMediaType
+  role ImageRole @default(GALLERY)
+  storageKey String @db.VarChar(512)
+  publicUrl String @db.VarChar(1024)
+  mimeType String? @db.VarChar(120)
+  width Int?
+  height Int?
+  previewOnly Boolean @default(true)
+  sortOrder Int @default(0)
+  asset Asset @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  @@index([assetId, mediaType, role])
+}
+model Tag {
+  id String @id @default(cuid())
+  slug String @unique
+  group String @db.VarChar(40)
+  translations TagTranslation[]
+  assets AssetTag[]
+}
+model TagTranslation {
+  id String @id @default(cuid())
+  tagId String
+  locale String @db.VarChar(10)
+  label String @db.VarChar(120)
+  tag Tag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  @@unique([tagId, locale])
+}
+model AssetTag {
+  assetId String
+  tagId String
+  asset Asset @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  tag Tag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  @@id([assetId, tagId])
+}
+model GenerationRecord {
+  id String @id @default(cuid())
+  assetId String @unique
+  provider String? @db.VarChar(120)
+  model String? @db.VarChar(120)
+  prompt String @db.Text
+  parameters Json?
+  seed String? @db.VarChar(120)
+  generatedAt DateTime?
+  reviewedAt DateTime?
+  reviewer String? @db.VarChar(120)
+  reviewNotes String? @db.Text
+  asset Asset @relation(fields: [assetId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
