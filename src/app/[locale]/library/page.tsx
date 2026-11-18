@@ -15,7 +15,7 @@ export default async function LibraryPage({ params, searchParams }: { params: Pr
   const category = categorySeed.find((item) => item.slug === query.category);
   const assets = await prisma.asset.findMany({
     where: { status: "PUBLISHED", ...(category ? { category: { slug: category.slug } } : {}) },
-    include: { translations: { where: { locale: raw } }, media: { where: { role: "COVER" }, take: 1 } },
+    include: { translations: { where: { locale: raw } }, media: { where: { role: "COVER" }, take: 1 }, category: true },
     orderBy: [{ featured: "desc" }, { sortOrder: "asc" }, { publishedAt: "desc" }],
     take: 60
   }).catch(() => []);
