@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Prisma } from "@prisma/client";
+import { Prisma, AssetStatus } from "@prisma/client";
 import { prisma } from "@/lib/prisma";
 
 function authorized(request: NextRequest) {
@@ -17,7 +17,7 @@ export async function PATCH(request: NextRequest, context: { params: Promise<{ i
   }
   if (body.status !== undefined) {
     if (!["DRAFT", "REVIEW", "PUBLISHED", "ARCHIVED"].includes(body.status)) return NextResponse.json({ error: "Invalid status" }, { status: 400 });
-    data.status = body.status;
+    data.status = body.status as AssetStatus;
     if (body.status === "PUBLISHED") data.publishedAt = new Date();
   }
   if (Array.isArray(body.translations)) {
