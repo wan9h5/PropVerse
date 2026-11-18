@@ -24,7 +24,7 @@ export default async function LibraryPage({ params, searchParams }: { params: Pr
     return translation?.name.toLowerCase().includes(query.q!.toLowerCase()) || JSON.stringify(translation?.searchTerms ?? []).toLowerCase().includes(query.q!.toLowerCase());
   }) : assets;
   return <main>
-    <header className="site-header"><Link href={`/${raw}`} className="wordmark"><span className="wordmark-mark">p.</span><span>propverse<span className="wordmark-dot">.</span></span></Link><nav className="site-nav"><Link href={`/${raw}`}>{t.home}</Link><Link href={`/${raw}/library`}>{t.library}</Link></nav><div className="site-tools"><span className="eyebrow">{raw}</span></div></header>
+    <header className="site-header"><Link href={`/${raw}`} className="wordmark"><span className="wordmark-mark">p.</span><span>propverse<span className="wordmark-dot">.</span></span></Link><nav className="site-nav"><Link href={`/${raw}`}>{t.home}</Link><Link href={`/${raw}/library`}>{t.library}</Link></nav><div className="site-tools"><LanguageSwitcher locale={raw}/></div></header>
     <div className="library-shell">
       <div className="library-heading"><div><span className="eyebrow">THE VISUAL REFERENCE INDEX</span><h1>{t.library}</h1><p>{t.intro}</p></div><span className="library-count">{filtered.length} ASSETS</span></div>
       <div className="library-layout">
