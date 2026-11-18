@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { isLocale, messages, locales } from "@/lib/i18n";
 import { categorySeed } from "@/lib/categories";
 
@@ -22,7 +23,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <header className="site-header">
       <Link href={`/${raw}`} className="wordmark"><span className="wordmark-mark">p.</span><span>propverse<span className="wordmark-dot">.</span></span></Link>
       <nav className="site-nav"><Link href={`/${raw}`}>{t.home}</Link><Link href={`/${raw}/library`}>{t.library}</Link><a href="#about">{t.about}</a></nav>
-      <div className="site-tools"><span className="eyebrow">{raw}</span><Link className="header-cta" href={`/${raw}/library`}>{t.explore} <ArrowUpRight size={12}/></Link></div>
+      <div className="site-tools"><LanguageSwitcher locale={raw}/><Link className="header-cta" href={`/${raw}/library`}>{t.explore} <ArrowUpRight size={12}/></Link></div>
     </header>
     <section className="page-wrap">
       <div className="home-masthead">
