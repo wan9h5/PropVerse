@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Search } from "lucide-react";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { categorySeed } from "@/lib/categories";
 import { isLocale, messages } from "@/lib/i18n";
 import { prisma } from "@/lib/prisma";
