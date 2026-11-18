@@ -1,0 +1,392 @@
+[
+  {
+    "slug": "rustic-three-legged-wooden-stool",
+    "category": "objects",
+    "translations": [
+      {
+        "locale": "zh-CN",
+        "name": "老式三脚木凳",
+        "summary": "一只带着磨损痕迹的乡居矮凳，适合年代戏与老屋内景。",
+        "visualDescription": "老榆木圆凳，三条略外撇的腿，凳沿因长期使用变得圆润，木纹与榫接清晰可见。",
+        "prompt": "老榆木圆凳，三条略外撇的腿，凳沿因长期使用变得圆润，木纹与榫接清晰可见。 低机位三分之四构图，完整呈现三条凳腿。单侧暖窗光掠过木纹，背景是素灰墙和泥地。50mm 镜头，写实质感，去除现代物件与文字。",
+        "searchTerms": [
+          "木凳",
+          "老家具",
+          "乡村"
+        ]
+      },
+      {
+        "locale": "zh-TW",
+        "name": "老式三腳木凳",
+        "summary": "帶著磨損痕跡的鄉居矮凳，適合年代短片與老屋內景。",
+        "visualDescription": "老榆木圓凳，三條腿微向外撇，凳緣因長年使用而圓滑，木紋與榫接清晰可見。",
+        "prompt": "老榆木圓凳，三條腿微向外撇，凳緣因長年使用而圓滑，木紋與榫接清晰可見。 低機位四分之三角度，完整呈現三條腿。暖色窗光從側邊掠過木紋，背景為灰牆與泥地。50mm 鏡頭，寫實質感，去除現代物件和文字。",
+        "searchTerms": [
+          "木凳",
+          "老家具",
+          "鄉村"
+        ]
+      },
+      {
+        "locale": "en",
+        "name": "Old three-legged wooden stool",
+        "summary": "A worn rural stool for period interiors and quiet domestic scenes.",
+        "visualDescription": "A low round elm stool with three splayed legs, visible joinery and a rim polished by years of use.",
+        "prompt": "A low round elm stool with three splayed legs, visible joinery and a rim polished by years of use. Low three-quarter composition with the entire stool visible. Warm side window light, a plain plaster wall and an earthen floor. Use a 50 mm lens and realistic worn wood. Exclude modern objects and lettering.",
+        "searchTerms": [
+          "furniture",
+          "rustic",
+          "elm"
+        ]
+      },
+      {
+        "locale": "fr",
+        "name": "Tabouret ancien à trois pieds",
+        "summary": "Un tabouret usé pour les intérieurs ruraux et les décors d’époque.",
+        "visualDescription": "Un tabouret bas en orme, trois pieds évasés, des assemblages visibles et un bord poli par l’usage.",
+        "prompt": "Un tabouret bas en orme, trois pieds évasés, des assemblages visibles et un bord poli par l’usage. Vue basse de trois quarts, tabouret entier. Lumière chaude de fenêtre, mur enduit et sol en terre. Objectif de 50 mm, bois usé réaliste, sans objet moderne ni texte.",
+        "searchTerms": [
+          "meuble",
+          "bois",
+          "rustique"
+        ]
+      },
+      {
+        "locale": "ja",
+        "name": "古い三本脚の木製スツール",
+        "summary": "時代劇や古民家の室内に使える、使い込まれた低い腰掛け。",
+        "visualDescription": "丸いニレ材の座面、外に開いた三本脚、使い込まれて滑らかになった縁と見える継ぎ目。",
+        "prompt": "丸いニレ材の座面、外に開いた三本脚、使い込まれて滑らかになった縁と見える継ぎ目。 低い位置から斜め前方を撮り、脚を含む全体を見せる。灰色の塗り壁と土間、温かい窓の横光。50mm レンズで木の摩耗を写実的に。現代の小物や文字は入れない。",
+        "searchTerms": [
+          "木製家具",
+          "古民家",
+          "腰掛け"
+        ]
+      },
+      {
+        "locale": "ko",
+        "name": "낡은 세발 나무 걸상",
+        "summary": "시대극과 오래된 시골집 실내에 어울리는 낮은 걸상.",
+        "visualDescription": "둥근 느릅나무 좌판과 바깥으로 벌어진 세 다리, 오랜 사용으로 반들해진 가장자리와 드러난 이음새.",
+        "prompt": "둥근 느릅나무 좌판과 바깥으로 벌어진 세 다리, 오랜 사용으로 반들해진 가장자리와 드러난 이음새. 낮은 사선 구도로 다리까지 전부 담는다. 회색 회벽과 흙바닥, 나뭇결을 스치는 따뜻한 창빛. 50mm 렌즈와 사실적인 마모 표현. 현대 물건과 글자는 제외한다.",
+        "searchTerms": [
+          "목가구",
+          "시골집",
+          "걸상"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "beijing-siheyuan",
+    "category": "architecture",
+    "translations": [
+      {
+        "locale": "zh-CN",
+        "name": "北京四合院",
+        "summary": "适合家庭戏、归家镜头和内院走位的传统住宅参考。",
+        "visualDescription": "灰砖灰瓦围合方形内院，正房与两侧厢房面对铺石庭院，深红木格门衬着一株落叶柿树。",
+        "prompt": "灰砖灰瓦围合方形内院，正房与两侧厢房面对铺石庭院，深红木格门衬着一株落叶柿树。 以庭院中轴为构图，平视 28mm 广角，保留两侧廊缘。阴天散射光，写实民居尺度，避免宫殿装饰和现代招牌。",
+        "searchTerms": [
+          "北京",
+          "庭院",
+          "灰砖"
+        ]
+      },
+      {
+        "locale": "zh-TW",
+        "name": "北京四合院",
+        "summary": "適合家庭戲、歸家鏡頭與院落走位的傳統住宅參考。",
+        "visualDescription": "灰磚灰瓦環繞方形內院，正房和兩側廂房面向石鋪庭院，暗紅木格門旁有一棵落葉的柿樹。",
+        "prompt": "灰磚灰瓦環繞方形內院，正房和兩側廂房面向石鋪庭院，暗紅木格門旁有一棵落葉的柿樹。 從庭院中軸平視拍攝，使用 28mm 廣角，保留兩側廊緣。陰天漫射光，呈現真實民居尺度，避免宮殿裝飾與招牌。",
+        "searchTerms": [
+          "北京",
+          "庭院",
+          "灰磚"
+        ]
+      },
+      {
+        "locale": "en",
+        "name": "Beijing siheyuan courtyard",
+        "summary": "A domestic courtyard for reunions, arrivals and scenes staged across multiple doorways.",
+        "visualDescription": "Gray brick walls and tiled eaves enclose a stone courtyard with flanking rooms, restrained red lattice doors and a leafless persimmon tree.",
+        "prompt": "Gray brick walls and tiled eaves enclose a stone courtyard with flanking rooms, restrained red lattice doors and a leafless persimmon tree. Keep the courtyard axis symmetrical at eye level with a 28 mm lens. Frame both side eaves in soft overcast light. Use residential proportions, with no palace ornament or signs.",
+        "searchTerms": [
+          "Beijing",
+          "courtyard",
+          "gray brick"
+        ]
+      },
+      {
+        "locale": "fr",
+        "name": "Cour de siheyuan à Pékin",
+        "summary": "Une cour résidentielle pour les scènes de retrouvailles et les entrées de personnages.",
+        "visualDescription": "Des briques et des tuiles grises entourent une cour pavée, bordée de pièces latérales, de portes rouges à croisillons et d’un plaqueminier dénudé.",
+        "prompt": "Des briques et des tuiles grises entourent une cour pavée, bordée de pièces latérales, de portes rouges à croisillons et d’un plaqueminier dénudé. Vue à hauteur des yeux, axe de la cour centré, objectif de 28 mm. Garder les deux avant-toits et une lumière diffuse. Échelle domestique, sans décor palatial ni enseigne.",
+        "searchTerms": [
+          "Pékin",
+          "cour",
+          "brique"
+        ]
+      },
+      {
+        "locale": "ja",
+        "name": "北京の四合院",
+        "summary": "家族の再会や帰宅の場面を組み立てやすい、伝統的な中庭住宅。",
+        "visualDescription": "灰色の煉瓦と瓦屋根が石畳の庭を囲む。左右に脇棟、赤い格子戸、葉を落とした柿の木。",
+        "prompt": "灰色の煉瓦と瓦屋根が石畳の庭を囲む。左右に脇棟、赤い格子戸、葉を落とした柿の木。 中庭の軸を正面から、目線の高さと28mmの広角で撮る。両側の軒を残し、曇天の拡散光で住宅らしい大きさを出す。宮殿風の装飾や看板は入れない。",
+        "searchTerms": [
+          "北京",
+          "中庭",
+          "煉瓦"
+        ]
+      },
+      {
+        "locale": "ko",
+        "name": "베이징 쓰허위안",
+        "summary": "가족의 재회나 귀가 장면에 활용할 수 있는 전통 중정 주택.",
+        "visualDescription": "회색 벽돌과 기와가 돌바닥 안뜰을 둘러싼다. 양옆에 작은 방과 짙은 붉은 격자문, 잎이 진 감나무가 있다.",
+        "prompt": "회색 벽돌과 기와가 돌바닥 안뜰을 둘러싼다. 양옆에 작은 방과 짙은 붉은 격자문, 잎이 진 감나무가 있다. 28mm 렌즈로 중정의 중심축을 눈높이에서 대칭으로 잡고 양쪽 처마를 넣는다. 흐린 날의 확산광과 실제 민가 비례. 궁전 장식과 간판은 제외한다.",
+        "searchTerms": [
+          "베이징",
+          "중정",
+          "회색 벽돌"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "traditional-chinese-costume",
+    "category": "culture",
+    "translations": [
+      {
+        "locale": "zh-CN",
+        "name": "明制马面裙",
+        "summary": "适合古装短片的服装参考，重点是裙门、侧褶和织物垂坠。",
+        "visualDescription": "象牙色交领上衣配深绛色马面裙，正面有平整宽裙门，两侧排列褶裥，裙边有低调刺绣。",
+        "prompt": "象牙色交领上衣配深绛色马面裙，正面有平整宽裙门，两侧排列褶裥，裙边有低调刺绣。 用无头裁缝人台展现腰线至裙摆的完整结构。斜侧柔光，暗色工作室，85mm 中焦，保留布料纹理，避免现代拉链和舞台式配饰。",
+        "searchTerms": [
+          "汉服",
+          "明制",
+          "服装"
+        ]
+      },
+      {
+        "locale": "zh-TW",
+        "name": "明制馬面裙",
+        "summary": "適用於古裝短片的服裝參考，著重裙門、側褶與布料垂墜。",
+        "visualDescription": "象牙色交領上衣搭配深絳色馬面裙，正面為平整寬裙門，兩側為整齊褶襉，裙邊有細緻刺繡。",
+        "prompt": "象牙色交領上衣搭配深絳色馬面裙，正面為平整寬裙門，兩側為整齊褶襉，裙邊有細緻刺繡。 用無頭裁縫人台展現腰線至裙襬的完整結構。柔和側光、深色工作室、85mm 鏡頭。保留織紋，避免現代拉鍊與舞台配飾。",
+        "searchTerms": [
+          "漢服",
+          "明制",
+          "服裝"
+        ]
+      },
+      {
+        "locale": "en",
+        "name": "Ming-style mamian skirt",
+        "summary": "A period wardrobe reference focused on the flat front panel, side pleats and drape.",
+        "visualDescription": "An ivory cross-collar blouse and a deep burgundy mamian skirt with a wide flat front panel, side pleats and restrained embroidery at the hem.",
+        "prompt": "An ivory cross-collar blouse and a deep burgundy mamian skirt with a wide flat front panel, side pleats and restrained embroidery at the hem. Show the waist to hem on a headless tailor’s form. Soft side light and a dark atelier, 85 mm framing, visible weave. Exclude modern zippers and stage accessories.",
+        "searchTerms": [
+          "hanfu",
+          "costume",
+          "pleats"
+        ]
+      },
+      {
+        "locale": "fr",
+        "name": "Jupe mamian de style Ming",
+        "summary": "Une référence de costume centrée sur le panneau plat, les plis latéraux et le tombé.",
+        "visualDescription": "Une blouse ivoire à col croisé et une jupe bordeaux à large panneau plat, plis de côté et broderie discrète à l’ourlet.",
+        "prompt": "Une blouse ivoire à col croisé et une jupe bordeaux à large panneau plat, plis de côté et broderie discrète à l’ourlet. Montrer de la taille à l’ourlet sur un mannequin de couture sans tête. Lumière latérale douce, atelier sombre, objectif de 85 mm et trame visible. Sans fermeture moderne ni accessoire de scène.",
+        "searchTerms": [
+          "hanfu",
+          "costume",
+          "plis"
+        ]
+      },
+      {
+        "locale": "ja",
+        "name": "明代風の馬面裙",
+        "summary": "平らな前面、脇のひだ、布の落ち方を確認できる時代衣装の資料。",
+        "visualDescription": "生成りの交領上衣と深いえんじ色の馬面裙。前は広く平らで、両脇にひだ、裾に控えめな刺繍が入る。",
+        "prompt": "生成りの交領上衣と深いえんじ色の馬面裙。前は広く平らで、両脇にひだ、裾に控えめな刺繍が入る。 頭のないトルソーで腰から裾まで見せる。暗い仕立て部屋で柔らかい横光、85mm レンズで織り目を残す。現代のファスナーや舞台用装飾は入れない。",
+        "searchTerms": [
+          "漢服",
+          "馬面裙",
+          "衣装"
+        ]
+      },
+      {
+        "locale": "ko",
+        "name": "명나라풍 마면군",
+        "summary": "평평한 앞판과 옆주름, 옷감의 낙하감을 보여주는 시대극 의상 참고.",
+        "visualDescription": "아이보리색 교차 깃 상의와 짙은 자주색 마면군. 앞판은 넓고 평평하며 양옆에 주름이 있고 밑단에 은은한 자수가 있다.",
+        "prompt": "아이보리색 교차 깃 상의와 짙은 자주색 마면군. 앞판은 넓고 평평하며 양옆에 주름이 있고 밑단에 은은한 자수가 있다. 머리 없는 재봉용 마네킹에 허리부터 밑단까지 보여준다. 어두운 작업실, 부드러운 측면광, 85mm 렌즈로 직물 결을 살린다. 현대식 지퍼와 무대 장식은 제외한다.",
+        "searchTerms": [
+          "한푸",
+          "의상",
+          "주름"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "karst-peak-forest",
+    "category": "landscapes",
+    "translations": [
+      {
+        "locale": "zh-CN",
+        "name": "喀斯特峰林",
+        "summary": "层叠石峰与蜿蜒河流，适合建立地理空间和体量感。",
+        "visualDescription": "陡峭的石灰岩独峰从河谷中拔起，河流在山脚弯折，低雾在峰间堆叠。",
+        "prompt": "陡峭的石灰岩独峰从河谷中拔起，河流在山脚弯折，低雾在峰间堆叠。 从高位取广角远景，用蜿蜒河道引导视线。湿润清晨，远山逐层淡出，绿色自然克制，避免夸张饱和度和现代建筑。",
+        "searchTerms": [
+          "石灰岩",
+          "河谷",
+          "山雾"
+        ]
+      },
+      {
+        "locale": "zh-TW",
+        "name": "喀斯特峰林",
+        "summary": "層疊石峰與蜿蜒河流，適合建立場景的地理空間與尺度。",
+        "visualDescription": "陡峭石灰岩孤峰自河谷升起，河流在山腳轉彎，低霧浮於峰林之間。",
+        "prompt": "陡峭石灰岩孤峰自河谷升起，河流在山腳轉彎，低霧浮於峰林之間。 使用高角度廣角遠景，以蜿蜒河道引導視線。濕潤清晨，遠山層層淡出，保留自然的綠色，不加入現代建築。",
+        "searchTerms": [
+          "石灰岩",
+          "河谷",
+          "山霧"
+        ]
+      },
+      {
+        "locale": "en",
+        "name": "Karst peak forest",
+        "summary": "Layered limestone peaks and a winding river for an establishing shot with real depth.",
+        "visualDescription": "Steep limestone towers rise from a river valley, with low mist collecting between ridges and along the bends.",
+        "prompt": "Steep limestone towers rise from a river valley, with low mist collecting between ridges and along the bends. Elevated wide shot guided by the river. Damp morning air and receding layers of haze. Keep the greens restrained and exclude contemporary buildings and oversaturation.",
+        "searchTerms": [
+          "limestone",
+          "river valley",
+          "mist"
+        ]
+      },
+      {
+        "locale": "fr",
+        "name": "Forêt de pitons karstiques",
+        "summary": "Des pics calcaires et une rivière sinueuse pour un plan d’ensemble tout en profondeur.",
+        "visualDescription": "Des tours calcaires abruptes s’élèvent au-dessus d’une vallée fluviale, avec une brume basse entre les reliefs.",
+        "prompt": "Des tours calcaires abruptes s’élèvent au-dessus d’une vallée fluviale, avec une brume basse entre les reliefs. Plan large en hauteur, guidé par la rivière. Air humide du matin, brume en couches dans le lointain, verts sobres, sans construction contemporaine.",
+        "searchTerms": [
+          "calcaire",
+          "vallée",
+          "brume"
+        ]
+      },
+      {
+        "locale": "ja",
+        "name": "カルスト峰林",
+        "summary": "石灰岩の峰と蛇行する川で、奥行きのある導入ショットを組み立てられる。",
+        "visualDescription": "川の谷から急峻な石灰岩の塔が立ち上がり、峰の間と川の曲がりに低い霧がたまる。",
+        "prompt": "川の谷から急峻な石灰岩の塔が立ち上がり、峰の間と川の曲がりに低い霧がたまる。 高所からの広角で、川の曲線を視線の導線にする。湿った朝と遠くへ重なる霞。緑は自然に抑え、現代建築は入れない。",
+        "searchTerms": [
+          "石灰岩",
+          "渓谷",
+          "霧"
+        ]
+      },
+      {
+        "locale": "ko",
+        "name": "카르스트 봉우리 숲",
+        "summary": "겹겹의 석회암 봉우리와 굽이치는 강을 깊이감 있는 도입 숏에 활용할 수 있다.",
+        "visualDescription": "가파른 석회암 봉우리가 강 계곡에서 솟아오르고 낮은 안개가 산과 굽은 강 사이에 내려앉는다.",
+        "prompt": "가파른 석회암 봉우리가 강 계곡에서 솟아오르고 낮은 안개가 산과 굽은 강 사이에 내려앉는다. 높은 위치에서 강의 곡선을 따라 넓게 담는다. 습한 아침, 멀어질수록 옅어지는 안개. 녹색은 절제하고 현대 건축은 제외한다.",
+        "searchTerms": [
+          "석회암",
+          "계곡",
+          "안개"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "mystical-cultivation-mountain",
+    "category": "special",
+    "translations": [
+      {
+        "locale": "zh-CN",
+        "name": "云上修行山境",
+        "summary": "为仙侠短片设计的一处原创山境，可用于登山或宗门初现。",
+        "visualDescription": "一座小亭立在孤峰顶端，狭窄石阶沿岩壁蜿蜒而上，远方靛蓝山脊浮出云海。",
+        "prompt": "一座小亭立在孤峰顶端，狭窄石阶沿岩壁蜿蜒而上，远方靛蓝山脊浮出云海。 低机位广角，石阶从前景引向峰顶。拂晓透出一线桃色轮廓光，保留真实的岩石风化与云层体积，避免过多光效和文字。",
+        "searchTerms": [
+          "仙侠",
+          "云海",
+          "石阶"
+        ]
+      },
+      {
+        "locale": "zh-TW",
+        "name": "雲上修行山境",
+        "summary": "為仙俠短片構想的原創山境，適合登山或宗門初現。",
+        "visualDescription": "一座小亭立於孤峰頂端，狹窄石階沿岩壁向上蜿蜒，遠方靛藍山脊浮出雲海。",
+        "prompt": "一座小亭立於孤峰頂端，狹窄石階沿岩壁向上蜿蜒，遠方靛藍山脊浮出雲海。 低機位廣角，石階從前景引向峰頂。拂曉透出一線桃色輪廓光，保留真實的岩石風化與雲層體積，避免過多光效和文字。",
+        "searchTerms": [
+          "仙俠",
+          "雲海",
+          "石階"
+        ]
+      },
+      {
+        "locale": "en",
+        "name": "Sanctuary above the clouds",
+        "summary": "An original xianxia location for a mountain ascent or a sect’s first reveal.",
+        "visualDescription": "A small open pavilion on an isolated crag, reached by winding stone steps above a sea of clouds and distant indigo ridges.",
+        "prompt": "A small open pavilion on an isolated crag, reached by winding stone steps above a sea of clouds and distant indigo ridges. Low wide view with the stone steps leading from the foreground to the pavilion. A thin peach dawn rim light, believable weathered rock and volumetric clouds. Avoid excessive glow and text.",
+        "searchTerms": [
+          "xianxia",
+          "cloud sea",
+          "pavilion"
+        ]
+      },
+      {
+        "locale": "fr",
+        "name": "Sanctuaire au-dessus des nuages",
+        "summary": "Un lieu original de xianxia pour une ascension ou la révélation d’une école de montagne.",
+        "visualDescription": "Un petit pavillon ouvert sur un pic isolé, accessible par des marches de pierre au-dessus des nuages et de crêtes indigo.",
+        "prompt": "Un petit pavillon ouvert sur un pic isolé, accessible par des marches de pierre au-dessus des nuages et de crêtes indigo. Plan large en contre-plongée, marches guidant le regard jusqu’au pavillon. Liseré pêche à l’aube, roche érodée et nuages volumétriques. Éviter les effets lumineux excessifs et le texte.",
+        "searchTerms": [
+          "xianxia",
+          "nuages",
+          "pavillon"
+        ]
+      },
+      {
+        "locale": "ja",
+        "name": "雲上の修行場",
+        "summary": "山を登る場面や門派の初登場に使える、仙侠向けのオリジナル風景。",
+        "visualDescription": "孤立した岩峰の上に小さな東屋があり、岩壁を縫う石段の向こうに藍色の稜線が雲海から浮かぶ。",
+        "prompt": "孤立した岩峰の上に小さな東屋があり、岩壁を縫う石段の向こうに藍色の稜線が雲海から浮かぶ。 低い位置から広角で撮り、手前の石段を東屋へつなげる。桃色の夜明けの縁光。風化した岩と立体的な雲を写実的に、強すぎる発光や文字は避ける。",
+        "searchTerms": [
+          "仙侠",
+          "雲海",
+          "石段"
+        ]
+      },
+      {
+        "locale": "ko",
+        "name": "구름 위의 수련처",
+        "summary": "산을 오르거나 문파가 처음 모습을 드러내는 장면을 위한 창작 선협 배경.",
+        "visualDescription": "외딴 바위 봉우리 위 작은 정자. 굽은 돌계단 너머 운해와 남빛 산등성이가 펼쳐진다.",
+        "prompt": "외딴 바위 봉우리 위 작은 정자. 굽은 돌계단 너머 운해와 남빛 산등성이가 펼쳐진다. 낮은 광각 구도로 전경의 돌계단이 정자로 이어지게 한다. 새벽의 옅은 복숭앗빛 윤곽광, 풍화된 바위와 입체적인 구름. 과한 발광 효과와 글자는 피한다.",
+        "searchTerms": [
+          "선협",
+          "운해",
+          "정자"
+        ]
+      }
+    ]
+  }
+]

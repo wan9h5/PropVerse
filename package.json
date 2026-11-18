@@ -8,7 +8,9 @@
     "start": "next start",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
-    "db:seed": "tsx prisma/seed.ts"
+    "db:seed": "node --env-file=.env --import tsx prisma/seed.ts",
+    "db:verify": "node --env-file=.env --import tsx prisma/verify.ts",
+    "db:up": "docker compose up -d --wait mysql"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",

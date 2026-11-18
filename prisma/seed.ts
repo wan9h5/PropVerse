@@ -33,17 +33,35 @@ const draftAssets = [
 ["landscapes","mountain-and-water-embrace","山环水抱地貌"],
 ["special","mystical-cultivation-mountain","玄幻修行山境"]
 ] as const;
-async function main(){
-for(const [index,category] of categorySeed.entries()){
-const row=await prisma.category.upsert({where:{slug:category.slug},update:{sortOrder:index},create:{slug:category.slug,sortOrder:index}});
-for(const [locale,name] of Object.entries(category.names)){
-await prisma.categoryTranslation.upsert({where:{categoryId_locale:{categoryId:row.id,locale}},update:{name},create:{categoryId:row.id,locale,name}});
+async function main() {
+  // Only add missing content. Re-running must preserve editorial changes.
+  await prisma.$transaction(async (tx) => {
+    for (const [index, category] of categorySeed.entries()) {
+      const row = await tx.category.upsert({
+        where: { slug: category.slug }, update: {},
+        create: { slug: category.slug, sortOrder: index }
+      });
+      for (const [locale, name] of Object.entries(category.names)) {
+        await tx.categoryTranslation.upsert({
+          where: { categoryId_locale: { categoryId: row.id, locale } }, update: {},
+          create: { categoryId: row.id, locale, name }
+        });
+      }
+    }
+    for (const [index, [categorySlug, slug, name]] of draftAssets.entries()) {
+      const category = await tx.category.findUniqueOrThrow({ where: { slug: categorySlug } });
+      const asset = await tx.asset.upsert({
+        where: { slug }, update: {},
+        create: { slug, categoryId: category.id, status: "DRAFT", sortOrder: index }
+      });
+      await tx.assetTranslation.upsert({
+        where: { assetId_locale: { assetId: asset.id, locale: "zh-CN" } }, update: {},
+        create: { assetId: asset.id, locale: "zh-CN", name }
+      });
+    }
+  }, { timeout: 30000 });
+  console.log("Seed complete: five categories, six category locales, 30 draft assets with Chinese names. Existing content preserved.");
 }
-}
-for(const [index,[categorySlug,slug]] of draftAssets.entries()){
-const category=await prisma.category.findUniqueOrThrow({where:{slug:categorySlug}});
-await prisma.asset.upsert({where:{slug},update:{sortOrder:index},create:{slug,categoryId:category.id,status:"DRAFT",sortOrder:index}});
-}
-console.log("Seeded five categories and 30 draft assets. Visuals and translations still require creation and review.");
-}
-main().finally(async()=>prisma.$disconnect());
+main()
+  .catch((error) => { console.error(error); process.exitCode = 1; })
+  .finally(async () => { await prisma.$disconnect(); });
