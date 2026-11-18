@@ -6,13 +6,13 @@ import { isLocale, messages, locales } from "@/lib/i18n";
 import { categorySeed } from "@/lib/categories";
 
 const tiles = [
-  { label: "A wooden stool", image: "https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=700&q=80", style: "tile-a" },
-  { label: "An old television", image: "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?auto=format&fit=crop&w=700&q=80", style: "tile-b" },
-  { label: "A handwritten letter", image: "https://images.unsplash.com/photo-1455390582262-044c-dea277a?auto=format&fit=crop&w=700&q=80", style: "tile-c" },
-  { label: "A traditional chair", image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=700&q=80", style: "tile-d" },
-  { label: "A vintage telephone", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80", style: "tile-e" },
-  { label: "A wooden toolbox", image: "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=700&q=80", style: "tile-f" },
-  { label: "A side table", image: "https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=700&q=80", style: "tile-g" }
+  { label: "OBJECTS / EVERYDAY THINGS", style: "tile-a" },
+  { label: "ARCHITECTURE / BUILT HERITAGE", style: "tile-b" },
+  { label: "CULTURE / LIVING TRADITIONS", style: "tile-c" },
+  { label: "LANDSCAPES / NATURAL FORMS", style: "tile-d" },
+  { label: "SPECIAL / IMAGINED WORLDS", style: "tile-e" },
+  { label: "MATERIAL / FORM STUDIES", style: "tile-f" },
+  { label: "VISUAL REFERENCES / 2D + 3D", style: "tile-g" }
 ];
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -31,8 +31,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="home-statement"><span className="eyebrow">FOR AI FILMMAKERS & STORYTELLERS</span><h1>{t.tagline}</h1><p style={{color:"var(--muted)",fontSize:13,lineHeight:1.7}}>{t.intro}</p><Link className="dark-link" href={`/${raw}/library`}>{t.explore} <ArrowUpRight size={14}/></Link></div>
       </div>
       <div className="visual-board">
-        <div className="board-label">A VISUAL INDEX OF STORY MATERIALS · 2D + 3D</div>
-        {tiles.map((tile) => <div className={`board-tile ${tile.style}`} key={tile.label}><img src={tile.image} alt={tile.label}/><span>{tile.label}</span></div>)}
+        <div className="board-label">A VISUAL INDEX OF STORY MATERIALS · AI-GENERATED REFERENCES</div>
+        {tiles.map((tile) => <div className={`board-tile ${tile.style}`} key={tile.label}><span>{tile.label}</span></div>)}
         <div className="board-foot"><span>DISCOVER BY LOOKING, NOT BY NAMING.</span><span>OBJECTS HAVE STORIES.</span></div>
       </div>
       <section className="section">
